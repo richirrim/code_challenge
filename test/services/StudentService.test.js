@@ -1,0 +1,26 @@
+import StudentService from '../../libs/services/StudentService'
+import students from './../students.test.json'
+
+describe('StudentService class', () => {
+  describe('Static method: getAllStudent', () => {
+    it('Devuelve una lista de estudiantes', () => {
+      const studentsList = StudentService.getAllStudent(students)
+
+      expect(studentsList.length).toBe(4)
+      expect(studentsList[0].name).toContain('Warren')
+      expect(studentsList[1].name).toContain('Lucinda')
+      expect(studentsList[2].name).toContain('Fuentes')
+      expect(studentsList[3].name).toContain('Claudia')
+    })
+
+    it('Validad que el array devuelto no este empty', () => {
+      const studentsList = StudentService.getAllStudent(students)
+      expect(studentsList).not.toHaveLength(0)
+    })
+
+    it('Validad que el objeto devuelto sea un array', () => {
+      const studentsList = StudentService.getAllStudent(students)
+      expect(Array.isArray(studentsList)).toBeTruthy()
+    })
+  })
+})
