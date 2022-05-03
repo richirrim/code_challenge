@@ -7,6 +7,12 @@ class StudentController {
     const studensList = StudentService.getAllStudent(students)
     return studensList
   }
+
+  static getStudentEmailsWithCertificates () {
+    const students = Reader.readJsonFile('students.json')
+    const emailList = StudentService.getStudentEmailsWithCertificates(students)
+    return emailList
+  }
 }
 
 export default StudentController
