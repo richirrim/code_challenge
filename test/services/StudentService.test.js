@@ -23,4 +23,28 @@ describe('StudentService class', () => {
       expect(Array.isArray(studentsList)).toBeTruthy()
     })
   })
+
+  describe('Static method: getStudentEmailsWithCertificates', () => {
+    it('Devuelve el email de los estudiantes que están certificados', () => {
+      const emailList = StudentService.getStudentEmailsWithCertificates(students)
+      const emails = [
+        'Todd@visualpartnership.xyz',
+        'Sexton@visualpartnership.xyz',
+        'Howell@visualpartnership.xyz'
+      ]
+
+      expect(emailList.length).toBe(3)
+      expect(emailList).toEqual(emails)
+    })
+
+    it('Validad que el array devuelto no este empty', () => {
+      const emailList = StudentService.getStudentEmailsWithCertificates(students)
+      expect(emailList).not.toHaveLength(0)
+    })
+
+    it('Validad que el elemento devuelto sea un array', () => {
+      const emailList = StudentService.getStudentEmailsWithCertificates(students)
+      expect(Array.isArray(emailList)).toBeTruthy()
+    })
+  })
 })
