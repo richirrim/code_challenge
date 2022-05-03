@@ -1,6 +1,6 @@
 class StudentService {
   static getAllStudent (students) {
-    return students.map(student => student)
+    return students
   }
 
   static getStudentEmailsWithCertificates (students) {
