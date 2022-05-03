@@ -1,5 +1,5 @@
-import StudentService from '../../libs/services/StudentService'
-import students from './../students.test.json'
+import StudentService from './../../libs/services/StudentService'
+import students from './../../students.test.json'
 
 describe('StudentService class', () => {
   describe('Static method: getAllStudent', () => {
