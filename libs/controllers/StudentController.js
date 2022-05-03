@@ -13,6 +13,12 @@ class StudentController {
     const emailList = StudentService.getStudentEmailsWithCertificates(students)
     return emailList
   }
+
+  static getStudentWithCreditsGreaterThan () {
+    const students = Reader.readJsonFile('students.json')
+    const studentsWithGreaterThat500 = StudentService.getStudentWithCreditsGreaterThan(students)
+    return studentsWithGreaterThat500
+  }
 }
 
 export default StudentController
