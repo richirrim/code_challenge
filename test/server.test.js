@@ -24,6 +24,18 @@ describe('GET /students/emails', () => {
   })
 })
 
+describe('GET /students/credits', () => {
+  it('Deberia devolver solo los estudiantes con creditos mayores que 500', async () => {
+    const response = await api.get('/students/credits').send()
+
+    expect(response.status).toBe(200)
+    expect(response.type).toEqual(expect.stringContaining('json'))
+    expect(response.body).not.toHaveLength(0)
+    expect(response.body[0]).toHaveProperty('credits', expect.any(Number))
+    expect(response.body[0].credits).toBeGreaterThan(500)
+  })
+})
+
 afterAll(() => {
   server.close()
 })

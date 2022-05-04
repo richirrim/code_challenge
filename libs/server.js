@@ -15,6 +15,11 @@ app.get('/students/emails', (request, response) => {
   response.json(emails)
 })
 
+app.get('/students/credits', (request, response) => {
+  const students = StudentController.getStudentWithCreditsGreaterThan500()
+  response.json(students)
+})
+
 const server = app.listen(PORT, () => {
   console.log(`API ejecutandose en localhost:${PORT}`)
 })

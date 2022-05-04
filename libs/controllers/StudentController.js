@@ -14,7 +14,7 @@ class StudentController {
     return emailList
   }
 
-  static getStudentWithCreditsGreaterThan () {
+  static getStudentWithCreditsGreaterThan500 () {
     const students = Reader.readJsonFile('students.json')
     const studentsWithGreaterThat500 = StudentService.getStudentWithCreditsGreaterThan(students)
     return studentsWithGreaterThat500
