@@ -4,11 +4,12 @@ import supertest from 'supertest'
 const api = supertest(app)
 
 describe('GET /example/msj', () => {
-  it('Deberia devolver un string', async () => {
-    const response = await api.get('/example/msj').send()
+  it('Deberia devolver todos los estudiantes de Visual Partner-Ship', async () => {
+    const response = await api.get('/students').send()
 
     expect(response.status).toBe(200)
-    expect(response.body).toBe('Welcome!')
+    expect(response.type).toEqual(expect.stringContaining('json'))
+    expect(response.body).not.toHaveLength(0)
   })
 })
 
