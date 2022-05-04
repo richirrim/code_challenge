@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/richirrim/code_challenge#readme",
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
     "@babel/preset-env": "^7.17.10",
     "babel-jest": "^28.0.3",
     "eslint": "^8.14.0",
@@ -34,6 +33,7 @@
     "supertest": "^6.2.3"
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mermaid": "^9.0.1"
   }
 }
