@@ -42,12 +42,12 @@ Como el nombre indica estas son todas las depenecias de las cuales depende este 
 #### Estrucutra
 
 - **📂libs**: contiene la estructura de archivos  con las que se construye toda la funcionalidad de la API.
-  - 📂services: contiene toda la lógica de la aplicación.
-  - 📂controllers: usa los métodos dentro de services para transformar la data devuelta por el Reader.js.
-  - 📂utils: contiene la utilidad que permitirá obtener toda la data de un archivo json, ser parciarda y devolverla lista para ser utilizada por el controller. 
-    - 📄Reader.js
-  - 📄server.js
+  - 📂services: contiene toda la lógica de la aplicación.
+  - 📂controllers: usa los métodos dentro de services para transformar la data devuelta por el Reader.js.
+  - 📂utils: contiene la utilidad que permitirá obtener toda la data de un archivo json, ser parciarda y devolverla lista para ser utilizada por el controller. 
+    - 📄Reader.js
+  - 📄server.js
 - **📂test**: contiene las pruebas necesarias para asegurar que el código funciona como se espera.
-  - 📂serivces: añade pruebas a cada module dentro de esta carpeta. 
-  - 📂utitls: añade pruebas a cada utilidad dentro de esta carpeta. 
-  - 📄server.test.js: añade pruebas con supertest para asegurar que lo que devuelve cada petición es lo que se espera.
+  - 📂serivces: añade pruebas a cada module dentro de esta carpeta. 
+  - 📂utitls: añade pruebas a cada utilidad dentro de esta carpeta. 
+  - 📄server.test.js: añade pruebas con supertest para asegurar que lo que devuelve cada petición es lo que se espera.
