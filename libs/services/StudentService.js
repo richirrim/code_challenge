@@ -8,7 +8,7 @@ class StudentService {
     return studentWithCertification.map(student => student.email)
   }
 
-  static getStudentWithCreditsGreaterThan (students) {
+  static getStudentWithCreditsGreaterThan500 (students) {
     return students.filter(student => student.credits > 500)
   }
 }
