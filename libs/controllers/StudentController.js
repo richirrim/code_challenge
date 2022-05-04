@@ -1,5 +1,5 @@
 import StudentService from '../services/StudentService'
-import Reader from '../lib/utils/Reader'
+import Reader from '../utils/Reader'
 
 class StudentController {
   static getAllStudent () {
