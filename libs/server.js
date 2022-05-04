@@ -10,6 +10,11 @@ app.get('/students', (request, response) => {
   response.json(students)
 })
 
+app.get('/students/emails', (request, response) => {
+  const emails = StudentController.getStudentEmailsWithCertificates()
+  response.json(emails)
+})
+
 const server = app.listen(PORT, () => {
   console.log(`API ejecutandose en localhost:${PORT}`)
 })
