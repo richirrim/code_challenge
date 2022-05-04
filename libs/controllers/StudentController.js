@@ -16,7 +16,7 @@ class StudentController {
 
   static getStudentWithCreditsGreaterThan500 () {
     const students = Reader.readJsonFile('students.json')
-    const studentsWithGreaterThat500 = StudentService.getStudentWithCreditsGreaterThan(students)
+    const studentsWithGreaterThat500 = StudentService.getStudentWithCreditsGreaterThan500(students)
     return studentsWithGreaterThat500
   }
 }
