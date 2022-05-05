@@ -123,8 +123,7 @@ No necesitas pasarle ningún otro parámetro. Este endpoint devolverá una lista
 
 **`GET`** localhost:3000/students/**emails**
 
-No necesitas pasarle ningún otro parametro. Este endpoint devolvera una lista de strings con los emails de aquellos estudiante  de Visual Partner-Ship que tengan certificación.
-
+No necesitas pasarle ningún otro parámetro. Este endpoint devolverá una lista de strings con los **emails** de aquellos estudiantes  de Visual Partner-Ship que tengan **certificación**.
 ```json
 [
   "Todd@visualpartnership.xyz",
@@ -139,7 +138,7 @@ No necesitas pasarle ningún otro parametro. Este endpoint devolvera una lista d
 
 **`GET`** localhost:3000/students/**credits**
 
-No necesitas pasarle ningún otro parametro. Este endpoint devolvera una lista de objetos de aquellos estudiante de Visual Partner-Ship que tengan creditos mayores a 500.
+No necesitas pasarle ningún otro parámetro. Este endpoint devolverá una lista de objetos de aquellos **estudiantes** de Visual Partner-Ship que tengan **créditos mayores a 500**.
 
 ```json
 [
