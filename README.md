@@ -75,8 +75,98 @@ Jest y supertest son dependencias que no permitirán crear pruebas unitarias.
 - supertest: permitirá hacer pruebas a las rutas de la  API.
 
 #### Diseño de los componentes
-#### API
 
+*⚠️ Doc en conxtrucción...*
+#### API
+Esta es una API consumption-only, es decir, que solo podrás usarla para consultar datos a través del método **GET**. Esta API te permite consultar la sig. Información de todos los estudiantes de Visual Partner-Ship.
+
+
+Puedes consultar:
+- Una lista de Estudiantes.
+- Una lista de Emails de estudiantes con certificación.
+- Una lista de los estudiantes con créditos mayores que 500.
+
+Ojo👀: Todo los devuelto por esta API siempre seran en formato **JSON**.
+
+##### API ENDPOINTS
+
+**`GET`** localhost:3000/**students**
+
+No necesitas pasarle ningún otro parámetro. Este endpoint devolverá una lista de objetos con toda la información de cada unos de los estudiantes de Visual Partner-Ship.
+
+```json
+[
+  {
+    "id": "6264d5d89f1df827eb84bb23",
+    "name": "Warren",
+    "email": "Todd@visualpartnership.xyz",
+    "credits": 508,
+    "enrollments": [
+      "Visual Thinking Intermedio",
+      "Visual Thinking Avanzado"
+    ],
+    "previousCourses": 1,
+    "haveCertification": true
+  },
+  {
+    "id": "6264d5d85cf81c496446b67f",
+    "name": "Lucinda",
+    "email": "Sexton@visualpartnership.xyz",
+    "credits": 677,
+    "enrollments": [
+      "Visual Thinking Avanzado"
+    ],
+    "previousCourses": 6,
+    "haveCertification": true
+  },...
+```
+
+**`GET`** localhost:3000/students/**emails**
+
+No necesitas pasarle ningún otro parametro. Este endpoint devolvera una lista de strings con los emails de aquellos estudiante  de Visual Partner-Ship que tengan certificación.
+
+```json
+[
+  "Todd@visualpartnership.xyz",
+  "Sexton@visualpartnership.xyz",
+  "Sharlene@visualpartnership.xyz",
+  ...
+  "Shields@visualpartnership.xyz",
+  "Jewell@visualpartnership.xyz",
+  "Hays@visualpartnership.xyz"
+]
+```
+
+**`GET`** localhost:3000/students/**credits**
+
+No necesitas pasarle ningún otro parametro. Este endpoint devolvera una lista de objetos de aquellos estudiante de Visual Partner-Ship que tengan creditos mayores a 500.
+
+```json
+[
+    {
+        "id": "6264d5d89f1df827eb84bb23",
+        "name": "Warren",
+        "email": "Todd@visualpartnership.xyz",
+        "credits": 508,
+        "enrollments": [
+            "Visual Thinking Intermedio",
+            "Visual Thinking Avanzado"
+        ],
+        "previousCourses": 1,
+        "haveCertification": true
+    },
+    {
+        "id": "6264d5d85cf81c496446b67f",
+        "name": "Lucinda",
+        "email": "Sexton@visualpartnership.xyz",
+        "credits": 677,
+        "enrollments": [
+            "Visual Thinking Avanzado"
+        ],
+        "previousCourses": 6,
+        "haveCertification": true
+    },...
+```
 #### Estrucutra
 
 - **📂libs**: contiene la estructura de archivos  con las que se construye toda la funcionalidad de la API.
