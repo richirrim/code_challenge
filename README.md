@@ -76,7 +76,7 @@ Jest y supertest son dependencias que no permitirán crear pruebas unitarias.
 
 #### Diseño de los componentes
 
-*⚠️ Doc en conxtrucción...*
+*⚠️ Doc en construcción...*
 #### API
 Esta es una API consumption-only, es decir, que solo podrás usarla para consultar datos a través del método **GET**. Esta API te permite consultar la sig. Información de todos los estudiantes de Visual Partner-Ship.
 
@@ -166,7 +166,7 @@ No necesitas pasarle ningún otro parámetro. Este endpoint devolverá una lista
         "haveCertification": true
     },...
 ```
-#### Estrucutra
+#### Estructura
 
 - **📂libs**: contiene la estructura de archivos  con las que se construye toda la funcionalidad de la API.
   - 📂services: contiene toda la lógica de la aplicación.
